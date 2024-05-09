@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "prueba-firebase-6cbd7": {
+      "hosting": {
+        "prueba-firebase": [
+          "prueba-firebase-6cbd7"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "prueba-firebase-6cbd7"
+  }
+}

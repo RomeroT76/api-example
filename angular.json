@@ -94,6 +94,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "prueba-firebase:build:production",
+              "serveTarget": "prueba-firebase:serve:production"
+            },
+            "development": {
+              "buildTarget": "prueba-firebase:build:development",
+              "serveTarget": "prueba-firebase:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
