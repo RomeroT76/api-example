@@ -1,1 +1,14 @@
 <p>mensajes works!</p>
+
+
+<label id="txtTitle">Titulo</label>
+<input type="text" id="txtTitle" name="txtTitle" 
+    [(ngModel)]="message.title"/>
+<br/>
+
+<label for="txtMsg">Mensaje</label>
+<textarea cols="50" rows="7" id="txtMsg" name="txtMsg" 
+    [(ngModel)]="message.content"></textarea>
+<br/>
+
+<button (click)="guardar()">Guardar</button>
