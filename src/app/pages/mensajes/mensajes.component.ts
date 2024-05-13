@@ -13,11 +13,29 @@ import { FormsModule } from '@angular/forms';
 export class MensajesComponent {
 
   message = new Message()
+  messages: any
 
   constructor(private messagesService: MensajesService) { }
 
+  ngOnInit(){
+    this.messagesService.getMessages().then(data => {
+
+      this.messages = data.docs.map((doc:any) => {
+        console.log(doc.id)
+        console.log(doc.data())
+        return {
+          id: doc.id,
+          ...doc.data()
+        }
+      })
+      
+      console.log('msgs', this.messages)
+    })
+  }
+
   guardar() {
     this.messagesService.addMessage(this.message)
+    this.ngOnInit()
   }
 
 }

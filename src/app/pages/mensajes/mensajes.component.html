@@ -12,3 +12,13 @@
 <br/>
 
 <button (click)="guardar()">Guardar</button>
+
+<br>
+
+<ul>
+    @for(msg of messages; track msg.id){
+        
+            <li><strong>{{msg.title}}</strong>: <span>{{msg.msg}}</span></li>
+        
+    }
+</ul>
